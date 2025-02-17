@@ -1,0 +1,191 @@
+body{
+    background-color: black;
+    overflow-x: hidden;
+}
+.navbar {
+    background-color: #000000 !important;
+    padding: 5px 15px;
+    margin: 5px;
+}
+.search-container {
+    flex-grow: 1; /* يجعل البحث يأخذ المساحة المتبقية */
+    max-width: 600px; /* تحديد الحد الأقصى لعرض البحث */
+}
+.search-container input {
+    border-radius: 20px 0 0 20px; /*اذا ابي اخلي زوايا البحث مستدير من جهة الزر*/
+    background-color: #121212;
+    color: white;
+    border: 1px solid #303030;
+}
+.search-container button {
+    border-radius: 0 20px 20px 0; /*اذا ابي اخلي زوايا البحث مستديرة من اليسار */
+    background-color: #303030;
+    color: white;
+    border: 1px solid #303030;
+}
+.search-container button:hover {
+    background-color: #ffffff;
+}
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+.custom-icon {  /* حق الايقونات اللي فوق صورة الحساب */
+    width: 40px;
+    height: 40px;
+    background-color: #303030;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+.custom1-icon {  /* حق الايقونات اللي فوق المكرفون  */
+    width: 50px;
+    height: 50;
+    background-color: #303030;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+.btn-outline-light {
+    background-color: #303030;
+    border: 2px solid #303030 !important; /* تغيير لون الحواف */
+    color: white; /* تغيير لون النص */
+    border-radius: 50px !important; /* التأكد من أن الزوايا مستديرة */
+}
+/* هذا التنسيق حق القائمة الجانبية اليسرى */
+.navbar-vertical {
+    background-color: #040404;
+    color: #ffffff;
+    border-right: 1px solid #000000; /* الحد بين القائمة والمحتوى */
+}
+/* تنسيق الروابط داخل القائمة */
+.navbar-vertical .nav-link {
+  color: #ffffff; /* تغيير اللون الأساسي للنص */
+  padding: 1px 1px; /* زيادة المسافات حول النص */
+  font-size: 15px; /* تغيير حجم الخط */
+  font-weight: 400; /* جعل النص أكثر سمكًا */
+  border-radius: 4px; /* إضافة حواف دائرية للروابط */
+  transition: background-color 0.3s ease; /* إضافة تأثير تدرج لسهولة التغيير */
+}
+/* تغيير اللون عند المرور على الرابط */
+.navbar-vertical .nav-item:hover .nav-link {
+  background-color: #ffffff43; /* تغيير الخلفية عند التمرير */
+}
+/* تخصيص خطوط التحديد بين الأقسام */
+hr {
+  border-color: #ecf0f1; /* تغيير لون الخطوط */
+}
+/* تخصيص عرض الهامش (Spacing) */
+.navbar-vertical .nav-item {
+  margin-bottom: 1px; /* زيادة المسافة بين العناصر */
+}
+.navbar-toggler {
+  background-color: #000000 !important; /* تغيير لون الخلفية */
+  border: 1px solid #ffffff1b; /* تغيير لون الحدود */
+}
+.navbar-toggler-icon {
+    background-image: url('photo/menu_40dp_\ FFFFFF38.png'); /* هنا اضفنا الثلاث خطوط للزر القوائم*/
+    background-size: cover; /* لضبط حجم الصورة */
+    width: 25px;  /* تعديل الحجم حسب الحاجة */
+    height: 25px;
+}
+.sidebar .nav-item { /* يجعل الأيقونة والنص في سطر واحد */
+    align-items: center; /* يضمن توسيط النص والأيقونة عموديًا */
+    padding: none; /* يضيف مساحة داخلية كافية */
+    border: 1px solid transparent; /* إطار شفاف مبدئيًا لمنع التغير المفاجئ */
+    border-radius: 8px; /* حواف دائرية دائمًا */
+    transition: all 0.3s ease-in-out; /* يجعل التحولات سلسة */
+}
+
+.sidebar .nav-item:hover {
+    color: #000000 !important;
+    background-color: rgba(255, 255, 255, 0.807) !important; /* تأثير خلفية عند المرور */
+    border: 2px solid white; /* يظهر الإطار عند المرور */
+}
+.sidebar .nav-link {
+    color: #ffffff;
+}
+.sidebar .nav-link:hover {
+    color: #000000 !important;
+}
+iframe {
+    height: 250px; /* اجعل الارتفاع ثابتًا لكل الفيديوهات */
+}
+.card {
+    background-color: #000000 !important;
+}
+.row {
+    gap: 10px; /* يضمن توزيع متساوٍ بين البطاقات */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.sidebar {
+    height: 85vh; /* يضمن أن القائمة تأخذ الطول الكامل */
+    position: fixed; /* يجعلها ثابتة */
+    left: 0;
+    top: 100px;
+    width: 235px;
+    background: #000000;
+    color: white;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 99;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.content {
+    margin-left: 250px; /* يجعل المحتوى لا يبدأ تحت القائمة */
+    padding: 15px;
+}
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: #303030;
+}
+.small-sa {
+    font-size: 0.5em; /* تصغير الخط أكثر */
+    top: -15px;
+}
+.my-nav .nav-link.active {
+  background-color: #ffffff;
+  color: rgb(255, 255, 255);
+}
+.my-nav .nav-link:hover {
+  background-color: #ffffffd3;
+  color: rgb(0, 0, 0);
+}
+.my-nav .nav-item {
+  margin-right: 15px;
+}
+.my-nav .nav-link {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+.my-nav .nav {
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 10px;
+}
+.body {
+    overflow-x: auto;
+}
+.my-nav {
+    margin-top: 60px; /* تعديل حسب ارتفاع الشريط الأول */
+    background-color: #00000000; /* لون الخلفية */
+    padding: 5px 0; /* تباعد داخلي */
+    position: relative; /* أو يمكنك تجربة fixed إن كنت تريده ثابتًا */
+    width: 100%;
+    z-index: 999;
+color: #00000000; /* لون الخلفية */
+    padding: 5px 0; /* تباعد داخلي */
+    position: relative; /* أو يمكنك تجربة fixed إن كنت تريده ثابتًا */
+    width: 100%;
+    z-index: 999;
+}
